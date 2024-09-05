@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form id="survey-form">
+        <!-- Form title -->
+        <h1 id="title">Survey Form</h1>
+        <p id="description">
+          Please fill out this survey form to help us improve.
+        </p>
+
+        <!-- Name input field with icon -->
+        <div class="form-group">
+          <label id="name-label" for="name">
+            <span class="icon">👤</span> Name:
+          </label>
+          <input type="text" id="name" placeholder="Enter your name" required />
+        </div>
+
+        <!-- Email input field with icon -->
+        <div class="form-group">
+          <label id="email-label" for="email">
+            <span class="icon">✉️</span> Email:
+          </label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+
+        <!-- Age input field with icon -->
+        <div class="form-group">
+          <label id="number-label" for="number">
+            <span class="icon">🎂</span> Age:
+          </label>
+          <input
+            type="number"
+            id="number"
+            placeholder="Enter your age"
+            min="0"
+            max="120"
+            required
+          />
+        </div>
+
+        <!-- Dropdown for role selection with icon -->
+        <div class="form-group">
+          <label for="dropdown">
+            <span class="icon">💼</span> Current Role:
+          </label>
+          <select id="dropdown" required>
+            <option value="" disabled selected>Select your role</option>
+            <option value="student">Student</option>
+            <option value="developer">Developer</option>
+            <option value="teacher">Teacher</option>
+          </select>
+        </div>
+
+        <!-- Radio button question with icon -->
+        <fieldset class="radio-group">
+          <legend><span class="icon">👍</span> Would you recommend us?</legend>
+          <label>
+            <input type="radio" name="recommend" value="definitely" required />
+            Definitely
+          </label>
+          <label>
+            <input type="radio" name="recommend" value="maybe" required />
+            Maybe
+          </label>
+          <label>
+            <input type="radio" name="recommend" value="not-sure" required />
+            Not sure
+          </label>
+        </fieldset>
+
+        <!-- Checkbox question with icon -->
+        <fieldset class="checkbox-group">
+          <legend><span class="icon">⭐</span> Select your preferences:</legend>
+          <label>
+            <input type="checkbox" name="preference" value="frontend"  />
+            Front-end Projects
+          </label>
+          <label>
+            <input type="checkbox" name="preference" value="backend" />
+            Back-end Projects
+          </label>
+        </fieldset>
+
+        <!-- Comments field with icon -->
+        <div class="form-group">
+          <label for="comments"> <span class="icon">💬</span> Comments: </label>
+          <textarea
+            id="comments"
+            rows="4"
+            placeholder="Any comments or suggestions?"
+          ></textarea>
+        </div>
+
+        <!-- Submit button -->
+        <button class="submit-btn" type="submit" id="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
